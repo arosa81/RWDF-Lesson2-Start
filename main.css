@@ -12,12 +12,11 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 0;
+  margin: 0; 
 }
 
 header, nav, footer, section, article, div {
   box-sizing: border-box;
-  width: 100% !important;
 }
 
 ul {
@@ -26,23 +25,11 @@ ul {
   margin: 0;
 }
 
-img, embed, object, video {
-  max-width: 100% !important;
-}
-
-main {
-    width: 100% !important;
-}
-
-a {
-  min-width: 48px !important;
-  min-height: 48px !important;
-}
 
 /*
  *
  * Common
- *
+ * 
  */
 
 .news__more {
@@ -66,7 +53,7 @@ a {
 }
 
 .header__inner {
-  width: 800px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -94,7 +81,7 @@ a {
  */
 
 .nav {
-  width: 800px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -118,7 +105,7 @@ a {
 .nav a {
   text-decoration: none;
   color: #616161;
-  padding: 1.5 em;
+  padding: 1.5em;
 }
 
 .nav a:hover {
@@ -135,7 +122,7 @@ a {
 
 main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  width: 800px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -154,8 +141,7 @@ main {
  */
 
 .hero {
-  float: left;
-  width: 480px;
+  width: 100%;
   position: relative;
   background-image: url("./images/dog.jpg");
   background-size: cover;
@@ -182,11 +168,10 @@ main {
  */
 
 .top-news {
-  float: right;
-  width: 320px;
-  height: 300px;
+  max-height: 300px;
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
+  width: 100%;
 }
 
 .news__title {
@@ -213,7 +198,7 @@ main {
 .top-news__item a {
   text-decoration: none;
   color: #666;
-  padding: 1.5 em;
+  padding: 1.5em inherit;
 }
 
 .top-news__item a:hover,
@@ -229,9 +214,8 @@ main {
  */
 
 .scores {
-  width: 480px;
-  float: left;
   padding-top: 1em;
+  flex-grow: 1;
 }
 
 .scores__table {
@@ -241,7 +225,7 @@ main {
 
 .scores__table th,
 .scores__table td {
-  padding: 1em;
+  padding: 1em; 
 }
 
 .scores__table th {
@@ -278,8 +262,7 @@ main {
  */
 
 .weather {
-  float: right;
-  width: 320px;
+  flex-grow: 1;
   padding: 1em;
 }
 
@@ -329,11 +312,12 @@ main {
 
 /*
  *
- * Weather
+ * Recent News
  *
  */
 
 .recent-news {
+  flex-grow: 1;
   clear: both;
   padding: 1em;
 }
@@ -356,7 +340,7 @@ main {
 .snippet__title a {
   text-decoration: none;
   color: #666;
-  padding: 1.5 em;
+  padding: 1.5em inherit;
 }
 
 .snippet__title a:hover,
@@ -385,4 +369,5 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
+  padding: 1.5em;
 }
